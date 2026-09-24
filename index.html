@@ -5,250 +5,229 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ge Makeup — Maquilhagem Profissional em Luanda</title>
 
-<!-- Google Fonts para Tipografia Elegante -->
+<!-- Tipografia de Luxo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --rose: #c9536b;
-    --rose-deep: #6e1c2e;
-    --rose-soft: #f4e8e8;
-    --cream: #faf6f3;
-    --white: #ffffff;
-    --ink: #1f1416;
-    --ink-muted: #5e484c;
-    --gold: #b8935a;
-    --gold-light: #dfc8a5;
-    --shadow-soft: 0 10px 30px -10px rgba(110, 28, 46, 0.08);
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
-    --radius-sm: 8px;
-    --radius-lg: 16px;
+    --bg-main: #fcf8f6;
+    --card-bg: #ffffff;
+    --primary: #581c27;
+    --primary-hover: #3d121a;
+    --accent: #c9536b;
+    --text-dark: #221819;
+    --text-muted: #665255;
+    --border: rgba(88, 28, 39, 0.08);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --radius: 12px;
   }
 
   * { box-sizing: border-box; }
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px;
   }
 
   body {
     margin: 0;
-    background: var(--cream);
-    color: var(--ink);
+    background: var(--bg-main);
+    color: var(--text-dark);
     font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
   }
 
   h1, h2, h3, .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
   }
 
-  /* Header e Navegação Fixa */
+  /* Cabeçalho */
   header {
     position: sticky;
     top: 0;
-    background: rgba(250, 246, 243, 0.92);
-    backdrop-filter: blur(10px);
+    background: rgba(252, 248, 246, 0.95);
+    backdrop-filter: blur(12px);
     z-index: 100;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(110, 28, 46, 0.08);
+    border-bottom: 1px solid var(--border);
   }
 
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 0.05em;
-    color: var(--rose-deep);
+    color: var(--primary);
     text-decoration: none;
+    text-transform: uppercase;
   }
 
   nav a {
-    color: var(--ink);
+    color: var(--text-dark);
     text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     transition: color 0.2s ease;
   }
 
   nav a:hover {
-    color: var(--rose);
+    color: var(--accent);
   }
 
-  /* Seção Hero */
+  /* Hero Section */
   .hero {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 1.5rem 5rem;
+    padding: 4rem 2rem 5rem;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 850px) {
     .hero {
       grid-template-columns: 1fr;
       padding-top: 2rem;
-      text-align: center;
+      gap: 2.5rem;
     }
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    line-height: 1.1;
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    line-height: 1.15;
     margin: 0 0 1.2rem;
-    color: var(--rose-deep);
+    color: var(--primary);
+    font-weight: 600;
   }
 
   .hero p {
-    font-size: 1.1rem;
-    color: var(--ink-muted);
-    max-width: 42ch;
+    font-size: 1.05rem;
+    color: var(--text-muted);
     margin: 0 0 2rem;
-  }
-
-  @media(max-width: 768px) {
-    .hero p { margin: 0 auto 2rem; }
+    max-width: 45ch;
   }
 
   .cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 1rem 2.2rem;
-    background: var(--rose-deep);
-    color: var(--cream);
+    background: var(--primary);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(110, 28, 46, 0.25);
+    letter-spacing: 0.03em;
     transition: all 0.3s ease;
   }
 
   .cta:hover {
-    background: var(--rose);
+    background: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(201, 83, 107, 0.35);
+    box-shadow: 0 8px 20px rgba(88, 28, 39, 0.2);
   }
 
-  .swatch {
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #f3bdca, var(--rose) 60%, var(--rose-deep) 100%);
-    box-shadow: var(--shadow-soft);
+  /* Moldura de Destaque da Imagem Principal */
+  .hero-image-wrapper {
     position: relative;
-    max-width: 380px;
-    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   }
 
-  .swatch::after {
-    content: '';
-    position: absolute;
-    inset: -12px;
-    border: 1px solid var(--gold-light);
-    border-radius: 50%;
-    z-index: -1;
+  .hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  /* Estrutura Geral de Seções */
+  /* Seções */
   section {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 5rem 2rem;
   }
 
   .divider {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(110, 28, 46, 0.15), transparent);
+    background: var(--border);
   }
 
   h2 {
     font-size: 2.2rem;
-    color: var(--rose-deep);
-    margin: 0 0 1.5rem;
-  }
-
-  /* Cartões de Serviços */
-  .grid-servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-
-  .card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    border: 1px solid rgba(110, 28, 46, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  }
-
-  .card h3 {
-    font-size: 1.5rem;
+    color: var(--primary);
     margin: 0 0 0.5rem;
-    color: var(--rose-deep);
+    font-weight: 600;
   }
 
-  .card p {
+  .section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+  }
+
+  /* Serviços */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin: 0 0 0.8rem;
+  }
+
+  .service-card p {
+    color: var(--text-muted);
     font-size: 0.95rem;
-    color: var(--ink-muted);
     margin: 0;
   }
 
-  .swatchmini {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  /* Galeria de Fotos */
-  .subtitle {
-    font-size: 1.05rem;
-    color: var(--ink-muted);
-    margin-top: -0.8rem;
-    margin-bottom: 2rem;
-  }
-
-  .gallery {
+  /* Galeria */
+  .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.2rem;
   }
 
   .gallery-item {
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
     aspect-ratio: 1;
-    background: var(--rose-soft);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #eae2df;
   }
 
-  .gallery img {
+  .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -256,32 +235,23 @@
   }
 
   .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
   }
 
   @media(max-width: 768px) {
-    .gallery { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
-  /* Seção Sobre */
-  .sobre-content {
-    max-width: 65ch;
-    font-size: 1.1rem;
-    color: var(--ink-muted);
-    line-height: 1.8;
+  /* Contato */
+  .contact-box {
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: var(--radius);
+    padding: 4rem 3rem;
   }
 
-  /* Seção de Contato */
-  .contact {
-    background: var(--rose-deep);
-    color: var(--cream);
-    border-radius: var(--radius-lg);
-    padding: 3.5rem 2.5rem;
-    box-shadow: 0 15px 35px rgba(110, 28, 46, 0.2);
-  }
-
-  .contact h2 {
-    color: var(--cream);
+  .contact-box h2 {
+    color: #ffffff;
   }
 
   .contact-grid {
@@ -293,36 +263,32 @@
 
   @media(max-width: 768px) {
     .contact-grid { grid-template-columns: 1fr; }
-    .contact { padding: 2.5rem 1.5rem; }
+    .contact-box { padding: 2.5rem 1.5rem; }
   }
 
   .contact-info p {
     font-size: 1.05rem;
-    line-height: 1.7;
-    color: rgba(250, 246, 243, 0.9);
+    color: rgba(255, 255, 255, 0.85);
   }
 
-  .whatsapp-box {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 1.8rem;
-    border-radius: var(--radius-sm);
+  .whatsapp-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  .whatsapp-box label {
+  .whatsapp-form label {
     display: block;
+    margin-bottom: 0.8rem;
     font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-    font-weight: 500;
   }
 
-  .whatsapp-box textarea {
+  .whatsapp-form textarea {
     width: 100%;
     height: 100px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--ink);
     padding: 0.8rem;
     font-family: inherit;
     font-size: 0.95rem;
@@ -331,38 +297,29 @@
     outline: none;
   }
 
-  .whatsapp-box textarea:focus {
-    border-color: var(--gold-light);
-  }
-
   .btn-whatsapp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     background: #25d366;
     color: #ffffff;
-    padding: 0.9rem 1rem;
-    border-radius: 6px;
     border: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 700;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
     font-size: 1rem;
-    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    transition: background 0.3s ease;
   }
 
   .btn-whatsapp:hover {
-    background: #20ba5a;
-    transform: translateY(-2px);
+    background: #1eb956;
   }
 
   footer {
     text-align: center;
-    padding: 2.5rem 1.5rem;
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-    border-top: 1px solid rgba(110, 28, 46, 0.08);
+    padding: 3rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
   }
 </style>
 </head>
@@ -380,27 +337,31 @@
 
 <div class="hero">
   <div>
-    <h1>Maquilhagem que revela a tua luz</h1>
-    <p>Serviços de maquilhagem profissional em Luanda para casamentos e eventos especiais. Cada rosto, uma história única.</p>
-    <a class="cta" href="https://wa.me/244927570429?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20e%20marcar%20uma%20sess%C3%A3o%20de%20maquilhagem." target="_blank">Marcar sessão no WhatsApp</a>
+    <h1>Maquilhagem profissional para momentos inesquecíveis</h1>
+    <p>Realce a sua beleza natural com produções exclusivas para casamentos, eventos e ocasiões especiais em Luanda.</p>
+    <a class="cta" href="https://wa.me/244927570429?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank">Marcar sessão no WhatsApp</a>
   </div>
-  <div class="swatch"></div>
+  
+  <!-- Imagem de Destaque no Topo (1790262696438.jpg) -->
+  <div class="hero-image-wrapper">
+    <img src="1790262696438.jpg" alt="Maquilhagem em Destaque Ge Makeup">
+  </div>
 </div>
 
 <div class="divider"></div>
 
 <section id="servicos">
-  <h2>Serviços Exclusivos</h2>
-  <div class="grid-servicos">
-    <div class="card">
-      <div class="swatchmini" style="background:#e9a3b3"></div>
+  <h2>Serviços</h2>
+  <p class="section-subtitle">Atendimento personalizado focado em durabilidade e acabamento impecável.</p>
+  
+  <div class="services-grid">
+    <div class="service-card">
       <h3>Maquilhagem de Noiva</h3>
-      <p>Look elegante e de alta durabilidade projetado especialmente para o seu grande dia, incluindo teste prévio.</p>
+      <p>Produção completa para o grande dia, com consultoria de imagem e teste prévio incluídos.</p>
     </div>
-    <div class="card">
-      <div class="swatchmini" style="background:#c9536b"></div>
+    <div class="service-card">
       <h3>Eventos & Festas</h3>
-      <p>Produção glamorosa sob medida para aniversários, galas, formaturas e momentos inesquecíveis.</p>
+      <p>Looks sofisticados para formaturas, aniversários e festas noturnas com alta fixação.</p>
     </div>
   </div>
 </section>
@@ -408,15 +369,14 @@
 <div class="divider"></div>
 
 <section id="trabalhos">
-  <h2>Portfólio de Trabalhos</h2>
-  <p class="subtitle">
-    Explore produções recentes realizadas pela Ge Makeup em Luanda.
-  </p>
-  <div class="gallery">
-    <div class="gallery-item"><img src="1790260011189.jpg" alt="Maquilhagem Ge Makeup 1"></div>
-    <div class="gallery-item"><img src="1790260022594.jpg" alt="Maquilhagem Ge Makeup 2"></div>
-    <div class="gallery-item"><img src="1790260039183.jpg" alt="Maquilhagem Ge Makeup 3"></div>
-    <div class="gallery-item"><img src="1790260056081.jpg" alt="Maquilhagem Ge Makeup 4"></div>
+  <h2>Portfólio</h2>
+  <p class="section-subtitle">Confira alguns dos trabalhos realizados pela Ge Makeup em Luanda.</p>
+  
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="1790260011189.jpg" alt="Trabalho Ge Makeup 1"></div>
+    <div class="gallery-item"><img src="1790260022594.jpg" alt="Trabalho Ge Makeup 2"></div>
+    <div class="gallery-item"><img src="1790260039183.jpg" alt="Trabalho Ge Makeup 3"></div>
+    <div class="gallery-item"><img src="1790260056081.jpg" alt="Trabalho Ge Makeup 4"></div>
   </div>
 </section>
 
@@ -424,29 +384,24 @@
 
 <section id="sobre">
   <h2>Sobre a Ge Makeup</h2>
-  <div class="sobre-content">
-    <p>
-      A Ge Makeup nasceu em Angola com o propósito de realçar a beleza natural e elevar a autoestima de cada cliente.
-      Combinando técnicas atualizadas, produtos de alta qualidade e um atendimento personalizado, garantimos que você se sinta radiante e confiante em qualquer ocasião.
-    </p>
-  </div>
+  <p style="max-width: 65ch; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+    A Ge Makeup nasceu em Angola com o propósito de realçar a beleza natural e elevar a autoestima de cada cliente. Combinando técnicas atualizadas, produtos de alta qualidade e um atendimento personalizado, garantimos que se sinta radiante e confiante em qualquer ocasião.
+  </p>
 </section>
 
 <section id="contacto">
-  <div class="contact">
+  <div class="contact-box">
     <h2>Contacto & Agendamentos</h2>
     <div class="contact-grid">
       <div class="contact-info">
-        <p>
-          <strong>WhatsApp:</strong> +244 927 570 429<br>
-          <strong>Atendimento:</strong> Luanda, Angola
-        </p>
+        <p><strong>WhatsApp:</strong> +244 927 570 429</p>
+        <p><strong>Atendimento:</strong> Luanda, Angola</p>
         <p>Preencha o campo ao lado para enviar uma mensagem direta via WhatsApp e confirmar a sua data.</p>
       </div>
 
-      <div class="whatsapp-box">
+      <div class="whatsapp-form">
         <label for="msg">Sua mensagem para agendamento:</label>
-        <textarea id="msg" placeholder="Ex: Olá! Gostaria de consultar a disponibilidade para o dia..."></textarea>
+        <textarea id="msg" placeholder="Ex: Olá! Gostaria de consultar disponibilidade para o dia..."></textarea>
         <button onclick="enviarWhatsApp()" class="btn-whatsapp">Enviar via WhatsApp</button>
       </div>
     </div>
