@@ -15,7 +15,7 @@
     padding-top:env(safe-area-inset-top,0px);
     padding-bottom:env(safe-area-inset-bottom,0px);
   }
-  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;}
   *{box-sizing:inherit;}
   body{
     margin:0;background:var(--cream);color:var(--ink);
@@ -38,8 +38,10 @@
   .hero p{font-family:-apple-system,sans-serif;font-size:1.05rem;line-height:1.6;max-width:38ch;color:#4a3236;}
   .cta{
     display:inline-block;margin-top:1.6rem;padding:.85rem 1.8rem;background:var(--rose-deep);color:var(--cream);
-    text-decoration:none;border-radius:2px;font-family:-apple-system,sans-serif;font-size:.95rem;
+    text-decoration:none;border-radius:4px;font-family:-apple-system,sans-serif;font-size:.95rem;font-weight:600;
+    transition:background .2s ease;
   }
+  .cta:hover{background:#5c1a29;}
   .swatch{
     aspect-ratio:1;border-radius:50%;
     background:radial-gradient(circle at 32% 28%, #e9a3b3, var(--rose) 55%, var(--rose-deep) 100%);
@@ -50,16 +52,69 @@
   h2{font-size:1.7rem;color:var(--rose-deep);margin-bottom:1.6rem;}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
   @media(max-width:700px){.grid3{grid-template-columns:1fr;}}
+  
+  /* Galeria com fotos reais */
   .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
-  .gallery div{aspect-ratio:1;border-radius:4px;}
+  .gallery img{
+    width:100%;
+    height:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:transform .3s ease;
+  }
+  .gallery img:hover{transform:scale(1.03);}
   @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr);}}
+
   .card h3{font-family:-apple-system,sans-serif;font-size:1.05rem;margin:0 0 .4rem;color:var(--ink);}
   .card p{font-family:-apple-system,sans-serif;font-size:.92rem;color:#5c4448;line-height:1.55;margin:0;}
   .swatchmini{width:44px;height:44px;border-radius:50%;margin-bottom:.9rem;}
-  .contact{background:var(--rose-deep);color:var(--cream);border-radius:4px;}
-  .contact h2{color:var(--cream);}
+  
+  /* Secção de Contacto e Formulário */
+  .contact{background:var(--rose-deep);color:var(--cream);border-radius:8px;padding:2.5rem 2rem;}
+  .contact h2{color:var(--cream);margin-top:0;}
   .contact p{font-family:-apple-system,sans-serif;line-height:1.7;font-size:1rem;}
-  .contact a{color:var(--cream);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+  @media(max-width:700px){.contact-grid{grid-template-columns:1fr;}}
+  
+  .whatsapp-box{
+    background:rgba(255,255,255,.08);
+    padding:1.5rem;
+    border-radius:6px;
+    border:1px solid rgba(255,255,255,.15);
+  }
+  .whatsapp-box label{
+    display:block;
+    font-family:-apple-system,sans-serif;
+    font-size:.9rem;
+    margin-bottom:.4rem;
+  }
+  .whatsapp-box textarea{
+    width:100%;
+    height:80px;
+    border-radius:4px;
+    border:none;
+    padding:.6rem;
+    font-family:-apple-system,sans-serif;
+    margin-bottom:1rem;
+    resize:none;
+  }
+  .btn-whatsapp{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    background:#25d366;
+    color:#fff;
+    padding:.8rem 1rem;
+    border-radius:4px;
+    text-decoration:none;
+    font-family:-apple-system,sans-serif;
+    font-weight:bold;
+    font-size:.95rem;
+  }
+  .btn-whatsapp:hover{background:#20ba5a;}
+
   footer{
     text-align:center;padding:2rem 1.5rem 3rem;font-family:-apple-system,sans-serif;
     font-size:.85rem;color:#8a6a6e;
@@ -82,7 +137,7 @@
   <div>
     <h1>Maquilhagem que revela a tua luz</h1>
     <p>Serviços de maquilhagem profissional em Luanda para casamentos e festas. Cada rosto, uma história.</p>
-    <a class="cta" href="#contacto">Marcar sessão</a>
+    <a class="cta" href="https://wa.me/244927570429?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20e%20marcar%20uma%20sess%C3%A3o%20de%20maquilhagem." target="_blank">Marcar sessão no WhatsApp</a>
   </div>
   <div class="swatch"></div>
 </div>
@@ -110,13 +165,13 @@
 <section id="trabalhos">
   <h2>Trabalhos</h2>
   <p class="sans" style="max-width:60ch;line-height:1.6;color:#5c4448;margin-top:-1rem;margin-bottom:1.6rem;">
-    Espaço reservado para fotos reais dos serviços já feitos — assim que enviares as imagens, substituo estes espaços.
+    Confira alguns dos trabalhos realizados pela Ge Makeup em Luanda.
   </p>
   <div class="gallery">
-    <div style="background:linear-gradient(135deg,#e9a3b3,#c9536b);"></div>
-    <div style="background:linear-gradient(135deg,#c9536b,#7d2438);"></div>
-    <div style="background:linear-gradient(135deg,#b8935a,#7d2438);"></div>
-    <div style="background:linear-gradient(135deg,#e9a3b3,#b8935a);"></div>
+    <img src="1790260011189.jpg" alt="Maquilhagem Ge Makeup 1">
+    <img src="1790260022594.jpg" alt="Maquilhagem Ge Makeup 2">
+    <img src="1790260039183.jpg" alt="Maquilhagem Ge Makeup 3">
+    <img src="1790260056081.jpg" alt="Maquilhagem Ge Makeup 4">
   </div>
 </section>
 
@@ -130,16 +185,37 @@
   </p>
 </section>
 
-<section id="contacto" class="contact">
-  <h2>Contacto</h2>
-  <p>
-    WhatsApp: +244 9XX XXX XXX<br>
-    E-mail: contacto@jamakeup.co.ao<br>
-    Luanda, Angola
-  </p>
+<section id="contacto">
+  <div class="contact">
+    <h2>Contacto & Marcações</h2>
+    <div class="contact-grid">
+      <div>
+        <p>
+          <strong>WhatsApp:</strong> +244 927 570 429<br>
+          <strong>Localização:</strong> Luanda, Angola
+        </p>
+        <p>Clique no formulário ao lado para enviar uma mensagem direta para o nosso WhatsApp e agendar o seu atendimento.</p>
+      </div>
+
+      <div class="whatsapp-box">
+        <label for="msg">Escreva a sua mensagem para agendamento:</label>
+        <textarea id="msg" placeholder="Ex: Olá, gostaria de agendar uma maquilhagem para o dia..."></textarea>
+        <button onclick="enviarWhatsApp()" class="btn-whatsapp">Enviar via WhatsApp</button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>© 2026 Ge Makeup — Luanda, Angola</footer>
+
+<script>
+  function enviarWhatsApp() {
+    const texto = document.getElementById('msg').value;
+    const numero = "244927570429";
+    const mensagemPadrao = texto ? encodeURIComponent(texto) : encodeURIComponent("Olá! Gostaria de agendar um serviço de maquilhagem.");
+    window.open(`https://wa.me/${numero}?text=${mensagemPadrao}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
